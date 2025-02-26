@@ -1,0 +1,57 @@
+
+<!-- esta etiqueta se encarga de definir la version del html -->
+<!DOCTYPE html>
+
+<!-- esta etiqueta sirve para declarar en donde empieza el archivo//  -->
+ <html lang="es">    <!--Esta etiqueta define el idioma del archivo --> 
+
+ <head>  <!--se encarag de definir la cabecera al archivo por ejemplo ponerle nombre a la pagina -->
+    <meta charset="UTF-8"> <!--ayuda a poder leer todos los caracteres de todos los idiomas por ejemplo tildes, puntos y otros -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--viewport es para que se ajuste a todos los dispositivos la primera sirve para que la letra no salga tan pequeña y la otra asigna que la letra no sea ni muy grande ni muy pequeña -->
+    <title>Calculadora de Gisell</title> <!-- Titulo de la pagina -->
+    <link rel="stylesheet" href="style.css"> <!-- la primera parte define que es un archivo es una hoja de estilos y la otra es para llamar la extension que queremos -->
+    <link rel="icon" href="favicon.png" type="image/png"> <!--la primera es definir que va agregar un icono, la segunda es la locacion del archivo y la tercera el tipo de archivo -->
+
+</head> <!--Aca termina la cabecera del archivo -->
+
+<body> <!--Aca empieza el cuerpo del archivo -->
+    
+    <div class="contenedor">
+        <h1 class="titulo">CALCULADORA SUPER MEGA PRO DE GISELL</h1>
+       
+    <div class="calculadora"> <!-- como una caja que va a contener otras etiquetas -->
+        <input type="text" id="pantalla" readonly> <!-- input es un tipo de entrada principal que permite que los usuarios interactuen, la siguiente etiqueta sirve para asignar el tipo, por ejemplo, numers,text, botones, el ultimo boton hace que no se pueda editar el tipo de input -->
+        
+        <div class="botones"> <!-- caja que va a contener los botones -->
+            <!-- Fila 1 -->
+            <button class="btn-num" onclick="playSound" >7</button> <!--el class sirve para asignar una clase a un elemento, el onclick sirve para que cuando se haga click en el boton se ejecute una funcion -->
+            <button class="btn-num" onclick="playSound" >8</button>
+            <button class="btn-num" onclick="playSound" >9</button>
+            <button class="btn-op" id="btn-sumar">+</button> <!--el id sirve para identificar el boton -->
+            
+            <!-- Fila 2 -->
+            <button class="btn-num" onclick="playSound" >4</button>
+            <button class="btn-num" onclick="playSound" >5</button>
+            <button class="btn-num" onclick="playSound" >6</button>
+            <button class="btn-op" id="btn-restar">-</button>
+
+            <!-- Fila 3 -->
+            <button class="btn-num" onclick="playSound" >1</button>
+            <button class="btn-num" onclick="playSound" >2</button>
+            <button class="btn-num" onclick="playSound" >3</button>
+            <button id="btn-igual">=</button>
+
+            <!-- Fila 4 -->
+            <button id="btn-clear">C</button>
+            <button class="btn-num">0</button>
+        </div> <!--Aca termina la caja de los botones -->
+    </div> <!--Aca termina la caja de la calculadora -->
+
+    </div>
+    
+
+ 
+
+     <script src="script.js"></script> <!--script sirve para utilizar codigos javascript, src define la ubicacion del archivo   Conectamos JavaScript -->
+ </body> <!--aca termina el cuerpo del archivo -->
+</html> <!--aca termina el archivo -->

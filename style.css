@@ -1,0 +1,116 @@
+/* Reseteo de márgenes y paddings */
+* { /* significa que se aplica a todos los elementos de la página */
+    margin: 0; /* margin significa margen y 0 es el espacio que va tener la margen */
+    padding: 0; /*es el espacio entre el borde y el contenido y 0 es el valor que va tener ese espacio */
+    box-sizing: border-box; /* la primera etiqueta sirve para que el boton tenga el mismo tamaño y el segundo es para garantizar que los elementos encajen dentro de los contenedores sin preocuparte por estos márgenes adicionales. */ 
+}
+
+
+
+@font-face {
+    font-family: 'calculator';
+    src: url('fonts/Calculator.ttf') format('truetype');  /* Ruta del archivo de la fuente */
+    font-style: normal; /*sirve para darle un estilo a la fuente */
+}
+
+
+
+
+
+/* Fondo y centrado de la calculadora */
+body {
+
+    .contenedor {
+        display: flex;
+        flex-direction: column; /* Asegura que los elementos estén en columna */
+        align-items:first baseline; /* Centra horizontalmente */
+        justify-content: center; /* Centra verticalmente */
+        height: 10px
+        ; /* Ocupa toda la altura de la pantalla */
+    }
+    
+    .titulo {
+        text-align: center;
+        font-size: 2rem;
+        color: #333;
+        margin-bottom: 20px; /* Espacio entre el título y la calculadora */
+        font-weight: bold;
+    }
+
+     background-color: #fdbdd9b4; /* sirve para darle color al fondo de la pagina */
+     display: flex; /* sirve para que los elementos se alineen en una sola fila */
+    justify-content: center;  /*sirve para que los elementos se alineen en la pagina 'en la parte de al lado' */
+    align-items: center;  /*sirve para que los elementos se alineen en la pagina 'en la parte de arriba' */
+    height: 100vh;  /*sirve para que la pagina ocupe el 100% de la pantalla */
+    font-family: 'luminari', fantasy; /*sirve para darle una fuente a la pagina */
+    padding: 50px ; /*sirve para darle un espacio entre el borde de la pagina y los elementos */
+}
+
+/* Estilo principal de la calculadora */
+.calculadora {
+     background-color: #e80aa22f; /*sirve para darle color al fondo de la calculadora */
+    padding: 30px; /*sirve para darle un espacio entre el borde de la calculadora y los elementos */
+    border-radius: 50px; /*sirve para darle un borde redondeado a la calculadora */
+    border: solid 2px #eb7dcce7; /*sirve para darle un color al borde de la calculadora */
+    box-shadow: 0 4px 50px rgba(0, 0, 0, 0.655); /*sirve para darle una sombra a la calculadora */
+}
+
+
+
+/* Estilo de la pantalla */
+#pantalla {
+    width: 100%; /*sirve para darle un tamaño al ancho de la pantalla */
+    height: 80px; /*sirve para darle un tamaño al alto de la pantalla */
+    text-align: right; /*sirve para que los numeros se alineen a la derecha */
+    margin-bottom: 30px; /*sirve para darle un espacio entre la pantalla y los botones */
+    padding: 10px;  /*sirve para darle un espacio entre el borde de la pantalla y los numeros */
+    border: 3px solid #eb7dcce7; /*sirve para darle un borde a la pantalla */
+    border-radius: 5px; /*sirve para darle un borde redondeado a la pantalla */
+    background-color: #f2dae7; /*sirve para darle color al fondo de la pantalla */
+    font-family: 'calculator', sans-serif;  ;
+    font-size: 80px; /*sirve para darle un tamaño a la letra de la pantalla */
+    font-weight: bold; /*sirve para darle un peso a la fuente */
+    max-width: 500px; /*sirve para darle un tamaño maximo a la pantalla */
+}
+
+/* Estilo de los botones */
+.botones {
+    display: grid; /*sirve para que los botones se alineen en una cuadricula */
+    grid-template-columns: repeat(4, 1fr); /*sirve para que los botones se alineen en 4 columnas */
+    gap: 10px; /*sirve para darle un espacio entre los botones */
+}
+
+button {
+    font-size: 1.5rem; /*sirve para darle un tamaño a la letra de los botones */
+    padding: 20px; /*sirve para darle un espacio entre el borde de los botones y los numeros */
+    background-color: #f4ebf0; /*sirve para darle color al fondo de los botones */
+    border: 1px solid #eb7dcce7;; /*sirve para quitar el borde de los botones */
+    border-radius: 1px; /*sirve para darle un borde redondeado a los botones */
+    cursor: pointer; /*sirve para que el cursor cambie al pasar por encima de los botones */
+    transition: background-color 0.3s; /*sirve para que el color de los botones cambie al pasar el cursor por encima */
+}
+
+button:hover {
+    background-color: #974e87; /*sirve para que el color de los botones cambie al pasar el cursor por encima */
+}
+
+/* Botón de operaciones */
+#btn-sumar, #btn-restar, #btn-igual { /*sirve para darle un estilo a los botones de operaciones */
+    background-color: #f70883; /*sirve para darle color al fondo de los botones */
+    color: white; /*sirve para darle color a la letra de los botones */
+}
+
+#btn-sumar:hover, #btn-restar:hover, #btn-igual:hover { /*sirve para darle un estilo a los botones de operaciones al pasar el cursor por encima */
+    background-color: #810244;
+}
+
+/* Botón de limpiar */
+#btn-clear { /*sirve para darle un estilo al boton de limpiar */
+    background-color: #d4026b; /*sirve para darle color al fondo del boton */
+    color: white; /*sirve para darle color a la letra del boton */
+}
+
+#btn-clear:hover {
+    background-color: #800140; /*sirve para darle color al fondo del boton al pasar el cursor por encima */
+}
+
